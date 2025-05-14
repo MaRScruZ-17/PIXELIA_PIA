@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PIXELA</title>
+  <link rel="stylesheet" href="styles_P.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+  <div class="logo">PIXELA</div>
+
+  <div class="menu-container">
+    <div class="user-menu">
+      <img src="https://cdn-icons-png.flaticon.com/512/456/456212.png" alt="Usuarioblanco" width="50" class="user-icon">
+      <div class="user-dropdown">
+        <a href="#">Perfil</a>
+        <a href="#">Configuración</a>
+        <a href="#">Cerrar sesión</a>
+      </div>
+    </div>
+
+    <button class="menu-toggle">☰</button>
+  </div>
+</header>
+
+
+ 
+
+  <div class="menu-panel">
+    <a href="#">Inicio</a>
+    <a href="#">Galería</a>
+    <a href="#">Favoritos</a>
+    <a href="#">Contacto</a>
+  </div>
+ <title>Panel de Publicaciones</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 font-sans">
+  <div class="flex h-screen">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-white border-r p-4">
+      
+      <div class="sidebar">
+    <div class="profile">
+     <img src="https://cdn-icons-png.flaticon.com/512/456/456212.png" alt="Usuarioblanco" width="50" class="user-icon2">
+      <span>Nombre del empleado</span>
+    </div>
+      
+      
+    <div class="menu-title">
+      <img src="https://cdn-icons-png.flaticon.com/512/1828/1828859.png" alt="Icono de menú">
+      <span>Menú</span>
+    </div>
+    
+
+
+
+    <div class="dropdown">
+      <details>
+        <summary>Gestión de página</summary>
+        <a href="#">Usuarios</a>
+      </br>
+        <a href="#">Publicaciones</a>
+      </br>
+        <a href="#">Categorías</a>
+    </br>
+        <a href="#">Usuarios reportados</a>
+      </details>
+    </div>
+
+    <div class="dropdown">
+      <details>
+        <summary>Reportes</summary>
+        <a href="#">Categorías</a>
+      
+      </details>
+    </div>
+
+
+      <div class="absolute bottom-4 left-4 text-sm text-gray-600">
+        <p class="font-medium">CASTORES DIENTUDOS</p>
+        <p class="text-xs text-gray-500">Administrador</p>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 p-6">
+      <h1 class="text-2xl font-bold mb-4">Categorias</h1>
+
+      <!-- Filtros -->
+ <div class="flex items-end gap-6 px-4 py-2">
+  <!-- Id usuario -->
+  <div class="flex flex-col text-left">
+    <span class="text-xs text-gray-600 mb-1">Id usuario</span>
+    <input type="text" value="#1" class="border px-3 py-1 rounded-md w-32" />
+  </div>
+
+  <!-- Id publicaciones -->
+  <div class="flex flex-col text-left">
+    <span class="text-xs text-gray-600 mb-1">Id Categoria</span>
+    <input type="text" value="#423" class="border px-3 py-1 rounded-md w-36" />
+  </div>
+
+  
+  <!-- Botón -->
+  <div class="flex flex-col">
+    <button class="bg-black text-white px-4 py-2 rounded-md mt-5">
+      Agregar Categoria
+    </button>
+  </div>
+  <div class="flex flex-col">
+    <button class="bg-black text-white px-4 py-2 rounded-md mt-5">
+      Actualizar Categoria
+    </button>
+  </div>
+  <div class="flex flex-col">
+    <button class="bg-black text-white px-4 py-2 rounded-md mt-5">
+      Eliminar Categoria
+    </button>
+  </div>
+</div>
+
+
+
+       
+      
+
+      <!-- Buscador -->
+      <input type="text" placeholder="Filtrar..." class="border w-full px-3 py-2 mb-4 rounded-md" />
+
+      <!-- Tabla -->
+      <div class="overflow-auto rounded-lg border">
+        <table class="w-full text-left border-collapse">
+          <thead class="bg-gray-100">
+            <tr>
+              <th class="px-4 py-2">#</th>
+              <th class="px-4 py-2">Id usuario</th>
+              <th class="px-4 py-2">Categoria</th>
+              <th class="px-4 py-2">Guardada</th>
+              <th class="px-4 py-2">Reporte</th>
+               
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t">
+              <td class="px-4 py-2"><input type="checkbox" /></td>
+              <td class="px-4 py-2">#1</td>
+              <td class="px-4 py-2">-</td>
+              <td class="px-4 py-2">*</td>
+              <td class="px-4 py-2">-</td>
+              
+            </tr>
+            <tr class="border-t bg-gray-50">
+              <td class="px-4 py-2"><input type="checkbox" /></td>
+              <td class="px-4 py-2">#2</td>
+              <td class="px-4 py-2">423</td>
+              <td class="px-4 py-2">*</td>
+              <td class="px-4 py-2">-</td>
+            
+            </tr>
+            <tr class="border-t">
+              <td class="px-4 py-2"><input type="checkbox" /></td>
+              <td class="px-4 py-2">#3</td>
+              <td class="px-4 py-2">212</td>
+              <td class="px-4 py-2">*</td>
+              <td class="px-4 py-2">-</td>
+           
+            </tr>
+            <tr class="border-t bg-gray-50">
+              <td class="px-4 py-2"><input type="checkbox" /></td>
+              <td class="px-4 py-2">#4</td>
+              <td class="px-4 py-2">8</td>
+              <td class="px-4 py-2">*</td>
+              <td class="px-4 py-2">-</td>
+              
+            </tr>
+            <tr class="border-t">
+              <td class="px-4 py-2"><input type="checkbox" /></td>
+              <td class="px-4 py-2">#5</td>
+              <td class="px-4 py-2">45</td>
+              <td class="px-4 py-2">*</td>
+              <td class="px-4 py-2">-</td>
+              
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Footer -->
+      <div class="flex justify-between items-center mt-4 text-sm text-gray-600">
+        <p>0 of 5 row(s) selected.</p>
+        <div class="space-x-2">
+          <button class="px-2 py-1 border rounded-md text-gray-500">ANTERIOR</button>
+       
+        </div>
+      </div>
+    </main>
+  </div>
+  
+
+
+  <footer>
+    © 2025 Pixela. Todos los derechos reservados. Quedad prohibida la reproducccion total o parcial de este sitio sin autorizacion.
+  </footer>
+
+  <script>
+    const toggleBtn = document.querySelector('.menu-toggle');
+    const menuPanel = document.querySelector('.menu-panel');
+    const userIcon = document.querySelector('.user-icon');
+    const userDropdown = document.querySelector('.user-dropdown');
+
+    toggleBtn.addEventListener('click', () => {
+      menuPanel.style.display = menuPanel.style.display === 'flex' ? 'none' : 'flex';
+      userDropdown.classList.remove('show');
+    });
+
+    userIcon.addEventListener('click', () => {
+      userDropdown.classList.toggle('show');
+      menuPanel.style.display = 'none';
+    });
+
+    window.addEventListener('click', (e) => {
+      if (!e.target.closest('header') && !e.target.closest('.menu-panel')) {
+        menuPanel.style.display = 'none';
+        userDropdown.classList.remove('show');
+      }
+    });
+  </script>
+</body>
+</html>
