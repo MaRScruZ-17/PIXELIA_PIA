@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Fuente Rozha One desde Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Rozha+One&display=swap" rel="stylesheet">
+  <style>
+    h2 {
+      font-family: 'Rozha One', serif;
+    }
+  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PIXELA</title>
+  <link rel="stylesheet" href="styles1.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+  <div class="logo">PIXELA</div>
+
+  <div class="menu-container">
+    <div class="user-menu">
+      <img src="https://cdn-icons-png.flaticon.com/512/456/456212.png" alt="Usuarioblanco" width="50" class="user-icon">
+      <div class="user-dropdown">
+        <a href="#">Perfil</a>
+        <a href="#">Configuración</a>
+        <a href="#">Cerrar sesión</a>
+      </div>
+    </div>
+
+    <button class="menu-toggle">☰</button>
+  </div>
+</header>
+
+
+  <div class="search-bar">
+        
+    <input type="text" placeholder="Buscar imágenes..."/>
+  </div>
+
+ <div class="menu-panel">
+  <a href="Acerca_de_nosotros.html" style="white-space: pre;">
+    A C E R C A    D E   N O S O T R O S
+  </a>
+  <a href="Testimonios.html" style="white-space: pre;">
+    T E S T I M O N I O S   D E    N U E S T R O S   U S U A R I O S 
+  </a>
+  <a href="Gestion_de_categoria.html" style="white-space: pre;">
+    G E S T I O N    D E    C A T E G O R I A  S
+  </a>
+  <a href="Usuarios_reportados.html" style="white-space: pre;">
+    G E S T I O N    D E    U S U A R I O S   R E P O R T A D O S
+  </a>
+  <a href="" style="white-space: pre;">
+    R E P O R T E   D E  C A T E G O R I A
+  </a>
+  <a href="Gestion_de_publicaciones.html" style="white-space: pre;">
+    G E S T I O N   D E  P U B L I C A C I O N E S
+  </a>
+</div>
+
+
+  <!-- CONTENIDO CENTRAL -->
+  <main>
+    <section class="gallery">
+      <div class="image-grid">
+        <img src="https://cdn.pixabay.com/photo/2017/01/06/19/15/lion-1955056_1280.jpg" alt="León">
+        <img src="https://cdn.pixabay.com/photo/2015/11/16/16/28/dolphin-1045950_1280.jpg" alt="Delfín">
+        <img src="https://cdn.pixabay.com/photo/2020/06/07/14/28/jaguar-5270979_1280.jpg" alt="Jaguar">
+        <img src="https://cdn.pixabay.com/photo/2016/01/14/06/09/squirrel-1139133_1280.jpg" alt="Ardilla">
+        <img src="https://cdn.pixabay.com/photo/2020/06/17/07/01/capybara-5308706_1280.jpg" alt="Carpinchos">
+      </div>
+    </section>
+
+    <section class="welcome">
+      <h2>Bienvenidos a PIXELIA: Tu galería interactiva de imágenes</h2>
+       <ul>
+        Explora, comparte y conecta a través de imágenes. En PIXELIA, puedes descubrir
+        colecciones inspiradoras, crear tu propio álbum personal y formar parte de una comunidad vibrante.
+       </ul>
+      <ul>
+        <li>Comparte tus momentos favoritos</li>
+        <li>Comenta y conecta con otros usuarios</li>
+        <li>Organiza tus imágenes en álbumes personalizados</li>
+        <li>Descubre las capturas más populares del día</li>
+      </ul>
+    </section>
+
+    <section class="auth-links">
+      <p>Para disfrutar de todas las funciones, <a href="#">inicia sesión</a> o <a href="#">regístrate ahora</a> y únete a la comunidad.</p>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Pixela. Todos los derechos reservados. Queda prohibida la reproducción total o parcial de este sitio sin autorización.
+  </footer>
+
+  <script>
+    const toggleBtn = document.querySelector('.menu-toggle');
+    const menuPanel = document.querySelector('.menu-panel');
+    const userIcon = document.querySelector('.user-icon');
+    const userDropdown = document.querySelector('.user-dropdown');
+
+    toggleBtn.addEventListener('click', () => {
+      menuPanel.style.display = menuPanel.style.display === 'flex' ? 'none' : 'flex';
+      userDropdown.classList.remove('show');
+    });
+
+    userIcon.addEventListener('click', () => {
+      userDropdown.classList.toggle('show');
+      menuPanel.style.display = 'none';
+    });
+
+    window.addEventListener('click', (e) => {
+      if (!e.target.closest('header') && !e.target.closest('.menu-panel')) {
+        menuPanel.style.display = 'none';
+        userDropdown.classList.remove('show');
+      }
+    });
+  </script>
+</body>
+</html>

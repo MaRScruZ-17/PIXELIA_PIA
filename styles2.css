@@ -1,5 +1,6 @@
 body {
-  font-family: 'Roboto', sans-serif;
+    font-family: 'Rubik', sans-serif;
+
   margin: 0;
   background-color: #f8f6f8;
   color: #333;
@@ -7,11 +8,6 @@ body {
 
 header {
   background-color: #222;
-  color: white;
-  padding: 10px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .logo {
@@ -21,57 +17,32 @@ header {
   letter-spacing: 16px;
 }
 
-.menu-container {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.menu-toggle {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 50px;
-  cursor: pointer;
-}
-
-.user-menu {
-  position: relative;
- 
-}
-
 .user-icon {
   width: 50px;
   height: 50px;
   cursor: pointer;
-  border-radius: 50%;      /* lo hace redondo si es cuadrado */
-  transition: transform 0.2s ease;
-  filter: invert(1);       /* convierte el ícono negro en blanco si es PNG */
-}
-
-.user-icon:hover {
-  transform: scale(1.1);   /* efecto de agrandar al pasar el mouse */
+  border-radius: 50%;
+  filter: invert(1);
 }
 
 .user-dropdown {
   display: none;
   position: absolute;
-  right: 10;
-  top: 30px;
+  right: 0;
+  top: 60px;
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 6px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  overflow: hidden;
   z-index: 10;
+  width: 150px;
 }
 
 .user-dropdown a {
   display: block;
-  padding: 10px 20px;
+  padding: 10px;
   color: #333;
   text-decoration: none;
-  transition: background 0.3s;
 }
 
 .user-dropdown a:hover {
@@ -85,15 +56,19 @@ header {
 .search-bar {
   background-color: #f1d5eb;
   padding: 15px 20px;
+}
+.menu-container {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
-.search-bar input {
-  width: 60%;
-  padding: 10px;
+.menu-toggle {
+  background: none;
   border: none;
-  border-radius: 5px;
+  color: white;
+  font-size: 50px;
+  cursor: pointer;
 }
 
 /* Menú desplegable tipo panel */
@@ -136,11 +111,15 @@ header {
   }
 }
 
+.about, .equipo, footer {
+  background-color: #f3d6ec;
+    font-family: 'Rubik', sans-serif;
+}
 
 footer {
-  background-color: #111;
-  color: white;
-  text-align: center;
-  padding: 10px;
-  font-size: 12px;
+  background-color: #1d1d1d;
+}
+.card-img-top {
+  height: 300px; /* Puedes ajustar esta altura según lo que necesites */
+  object-fit: cover;
 }

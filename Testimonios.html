@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PIXELA</title>
+  <link rel="stylesheet" href="styles3.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+  <div class="logo">PIXELA</div>
+
+  <div class="menu-container">
+    <div class="user-menu">
+      <img src="https://cdn-icons-png.flaticon.com/512/456/456212.png" alt="Usuarioblanco" width="50" class="user-icon">
+      <div class="user-dropdown">
+        <a href="#">Perfil</a>
+        <a href="#">Configuración</a>
+        <a href="#">Cerrar sesión</a>
+      </div>
+    </div>
+
+    <button class="menu-toggle">☰</button>
+  </div>
+</header>
+
+<div class="search-bar">
+        
+    <input type="text" placeholder="Buscar imágenes..."/>
+  </div>
+
+  <div class="menu-panel">
+     <a href="Acerca de nostros.html" style="white-space: pre;">
+  A C E R C A    D E   N O S O T R O S
+</a>
+  <a href="Acerca de nostros.html" style="white-space: pre;">
+  T E S T I M O N I O S   D E    N U E S T R O S   U S U A R I O S 
+</a>
+  <a href="Gestión de categoria.html" style="white-space: pre;">
+  G E S T I O N    D E    C A T E G O R I A  S
+</a>
+<a href="Usuariosreportados.html" style="white-space: pre;">
+  G E S T I O N    D E    U S U A R I O S   R E P O R T A D O S
+</a>
+<a href="favoritos.html" style="white-space: pre;">
+  R E P O R T E   D E  C A T E G O R I A
+</a>
+<a href="Gestión de publicaciones.htmll" style="white-space: pre;">
+  G E S T I O N   D E  P U B L I C A C I O N E S
+</a>
+
+
+  </div>
+
+
+<section class="comentarios container py-4">
+  <div class="card p-4 mb-4 text-center">
+    <h3><strong>¡Tú experiencia inspira a otros!</strong></h3>
+    <p>
+      Nos encantaría conocer tu experiencia.<br>
+      Tómate unos segundos y califica tu experiencia con PIXELIA<br>
+      y dinos qué tan satisfecho estás con la plataforma.
+    </p>
+    <form class="d-flex justify-content-center mt-3">
+      <input type="text" class="form-control w-50 me-2" placeholder="¡Déjanos tu comentario aquí!">
+      <button type="submit" class="btn btn-dark">Subir</button>
+    </form>
+  </div>
+
+  <div class="comentario card p-3 mb-3">
+    <div class="d-flex align-items-start">
+      <img src="https://i.imgur.com/5QF53zz.png" class="icono-comentario me-3" alt="Avatar">
+      <div>
+        <p class="mb-1">
+          <span class="comilla">“</span>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat.
+        </p>
+        <strong>Alexander Louis</strong>
+      </div>
+    </div>
+  </div>
+
+  <div class="comentario card p-3 mb-3">
+    <div class="d-flex align-items-start">
+      <img src="https://i.imgur.com/5QF53zz.png" class="icono-comentario me-3" alt="Avatar">
+      <div>
+        <p class="mb-1">
+          <span class="comilla">“</span>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat.
+        </p>
+        <strong>Diana Montgomery</strong>
+      </div>
+    </div>
+  </div>
+
+  
+</section>
+  <footer>
+    © 2025 Pixela. Todos los derechos reservados. Quedad prohibida la reproducccion total o parcial de este sitio sin autorizacion.
+  </footer>
+
+  <script>
+    const toggleBtn = document.querySelector('.menu-toggle');
+    const menuPanel = document.querySelector('.menu-panel');
+    const userIcon = document.querySelector('.user-icon');
+    const userDropdown = document.querySelector('.user-dropdown');
+
+    toggleBtn.addEventListener('click', () => {
+      menuPanel.style.display = menuPanel.style.display === 'flex' ? 'none' : 'flex';
+      userDropdown.classList.remove('show');
+    });
+
+    userIcon.addEventListener('click', () => {
+      userDropdown.classList.toggle('show');
+      menuPanel.style.display = 'none';
+    });
+
+    window.addEventListener('click', (e) => {
+      if (!e.target.closest('header') && !e.target.closest('.menu-panel')) {
+        menuPanel.style.display = 'none';
+        userDropdown.classList.remove('show');
+      }
+    });
+  </script>
+</body>
+</html>
