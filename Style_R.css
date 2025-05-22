@@ -1,0 +1,294 @@
+html, body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background-color: #f8f6f8;
+  color: #333;
+  height: 100%;
+}
+
+header {
+  background-color: #222;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 50px;
+  color: #e675b7;
+  font-weight: bold;
+  letter-spacing: 16px;
+}
+
+.menu-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 50px;
+  cursor: pointer;
+}
+
+.user-menu {
+  position: relative;
+ 
+}
+
+.user-icon {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 50%;      /* lo hace redondo si es cuadrado */
+  transition: transform 0.2s ease;
+  filter: invert(1);       /* convierte el ícono negro en blanco si es PNG */
+}
+
+.user-icon:hover {
+  transform: scale(1.1);   /* efecto de agrandar al pasar el mouse */
+}
+
+.user-dropdown {
+  display: none;
+  position: absolute;
+  right: 10;
+  top: 30px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  z-index: 10;
+}
+
+.user-dropdown a {
+  display: block;
+  padding: 10px 20px;
+  color: #333;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.user-dropdown a:hover {
+  background-color: #eee;
+}
+
+.user-dropdown.show {
+  display: block;
+}
+
+.search-bar {
+  background-color: #f1d5eb;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar input {
+  width: 60%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Menú desplegable tipo panel */
+.menu-panel {
+  display: none;
+  background-color: #f1d5eb;
+  padding: 20px;
+  text-align: center;
+  flex-direction: column;
+  gap: 10px;
+  animation: slideDown 0.3s ease-in-out;
+}
+
+.menu-panel a {
+  display: block;
+  padding: 2px;
+  margin: 0px auto;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+ 
+}
+
+.menu-panel a:hover {
+  background-color: #e6b8e4;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/*REGISTRO*/
+.registro-fondo {
+  background: url('Registro-fondo.jpg') no-repeat center center fixed;
+  background-size: cover; /* IMAGEN CUBRE TODA EL AREA DISPONIBLE */
+  min-height: 65vh;       /* ALTURA DE IMAGEN DE FONDO */
+  position: relative;
+  padding: 30px;          /* ESPACIO INTERNO DE LOS ELEMENTOS */
+}
+
+.computadora-img {
+  position: fixed;    /* COLOCAR IMAGEN FIJA */
+  top: 190px;          /* MUEVE IMAGEN HACIA ABAJO */
+  left: 320px;         /* LA ACERCA AL CENTRO */
+  width: 150px;       /* DEFINE EL TAMAÑO MÁS GRANDE */
+  z-index: 1000;         /* VISIBILIDAD SOBRE OTROS ELEMENTOS */
+}
+
+.registro-container {
+  display: flex;          /* MODO FLEX PARA ORGANIZAR ELEMENTOS*/
+  flex-direction: column; /* ACOMODA LOS ELEMENTOS UNO DENAJO DE OTRO */
+  align-items: center;    /* CENTRA LOS ELEMENTOS HORIZONTALMENTE */
+  position: relative;     /* POSICIÓN DE REFERENCIA PARA OTROS ELEMENTOS */
+  overflow: visible;      /* ELEMENTOS INTERNOS VISIBLES */
+  z-index: 1;
+}
+
+
+.registro-titulo {
+  position: absolute; /* TITULO POR ENCIMA DEL FORMULARIO*/
+  top: -20px;         /* LO SUBE PARA QUE SE SUPERPONGA */
+  background-color: #e055ce;
+  color: white;
+  font-weight: 500;   /* GROSOR DE LA FUENTE */
+  padding: 10px 40px;
+  width: 200px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+  font-size: 24px;
+  z-index: 5;
+}
+
+.registro-box {
+  background-color: rgba(242, 227, 255, 0.8);
+  display: flex;
+  padding: 40px;
+  gap: 90px;           /* SEPARA LOS BLOQUES DERECHO E IZQUIERDO*/
+  box-shadow: 0 0 15px rgba(0,0,0,0.2); /* AGREGAR UNA SOMBRA */
+}
+
+.form-left, .form-right {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.avatar-placeholder {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;   /* MARGEN INFERIOR */
+}
+
+.avatar-placeholder img {
+  width: 100px;
+  height: 100px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 5px;     /* BORDES REDONDEADOS */
+  border: 1px solid #aaa;
+  padding: 5px 10px;
+}
+
+.input-group img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.input-group input {
+  border: none;
+  outline: none;
+  width: 220px;
+  font-size: 14px;
+}
+
+select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  font-size: 14px;
+  width: 250px;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.gender-select {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.gender-select img {
+  width: 24px;
+}
+
+.user-select {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-select img {
+  width: 24px;
+}
+
+
+.button-group {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+button.ingresar {
+  background-color: #7E5A8A;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer; /* CAMBIA EL CURSOR */
+  width: 200px;
+  align-self: flex-end;
+}
+
+button.iniciar-sesion {
+  background-color: #B8B0B0;
+  color: #6B4A3A;
+  border: none;
+  padding: 10px;
+  font-weight: bold;
+  cursor: not-allowed;
+  width: 200px;
+  align-self: flex-end;
+}
+
+footer {
+  background-color: #111;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+}
