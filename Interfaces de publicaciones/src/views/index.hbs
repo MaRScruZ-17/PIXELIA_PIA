@@ -1,0 +1,60 @@
+<div class="card">
+
+    <!-- Card para texto subir imagen -->
+    <div class="card-header bg-dark">
+        <h3 class="card-title text-white">
+            <i class="far fa-image"> SUBE IMAGEN</i>
+
+
+        </h3>
+    </div>
+
+    <div class="card-body">
+        <form action="/images" method="POST" enctype="multipart/form-data">
+            <!--Vamos a crear un formulario que dirija hacia la ruta images-->
+            <!--Contenedor para elegir archivo-->
+            <div class="form-group mb-3">
+                <label for="inputGroupFile" class="form-label"> Elige tu archivo</label>
+                <input class="form-control" type="file" id="inputGroupFile" name="image" required>
+            </div>
+            <!--Contenedor para agregar titulo de imagen-->
+            <div class="form-group mb-3">
+                <input type="text" class="form-control" name="title" placeholder="Titulo de la publicación" required>
+            </div>
+            <!--Contenedor para agregar descripcion a la imagen-->
+            <div class="form-group mb-3">
+                <textarea name="description" rows="2" class="form-control" placeholder="Descripción de la publicación"
+                    required></textarea>
+            </div>
+            <!--Botón para subir publicación-->
+            <div class="form-group">
+                <button type="submit" class="btn btn-success">
+                    <i class="fa fa-upload"></i> Publicar tu imagen
+                </button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+
+<!--CHECAR BIEN EL CÓDIGO-->
+<div class="card mt-2">
+    <div class="card-header bg-dark text-white">
+        <h3><i class="far fa-images"></i> Subidas Recientes</h3>
+    </div>
+    <div class="card-body">
+        <div class="row">
+
+            {{#each images}}
+            <div class="col-md-4">   
+                <a href="">
+                    <img src="/upload/{{filename}}" alt="">
+                </a> 
+
+            </div>
+            {{/each}}
+        </div>
+
+    </div>
+</div>
