@@ -12,10 +12,13 @@ const ImageSchema = new Schema ({
     timestamp: { type: Date, default: Date.now }
 });
 
+ImageSchema.set('toObject', { virtuals: true });
+ImageSchema.set('toJSON', { virtuals: true });
+
 //Este uniqueID le quita la extensión al nombre del archivo, solo devuelve el nombre
 ImageSchema.virtual('uniqueId')
     .get(function() {
-        return this.filename.replace(path.extname(this.filename), '');
+        return this.filename.replace(path.extname(this.filename), '')
 });
 
 module.exports = mongoose.model('Image', ImageSchema);

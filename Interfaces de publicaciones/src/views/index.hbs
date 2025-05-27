@@ -46,14 +46,14 @@
     <div class="card-body">
         <div class="row">
 
-            {{#each images}}
-            <div class="col-md-4">   
-                <a href="">
-                    <img src="/upload/{{filename}}" alt="">
-                </a> 
+{{#each images}}
+  <div class="image-card">
+    <a href="/images/{{uniqueId}}">
+      <img src="/upload/{{filename}}" alt="{{title}}" width="300">
+    </a>
+  </div>
+{{/each}}
 
-            </div>
-            {{/each}}
         </div>
 
     </div>

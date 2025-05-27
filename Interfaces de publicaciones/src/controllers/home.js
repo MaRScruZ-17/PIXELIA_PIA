@@ -4,21 +4,9 @@ const ctrl = {};
 const { Image } = require('../models');
 
 ctrl.index = async (req, res) => {
-    try {
-        const images = await Image.find().sort({ timestamp: -1 });
-        res.render('index', { images });
-    } catch (error) {
-        res.status(500).send('Error al cargar las imágenes');
-    }
+    const imagesRaw = await Image.find().sort({timestamp: -1});
+    const images = imagesRaw.map(img => img.toObject({ virtuals: true }));
+    res.render('index', { images });
 };
 
 module.exports = ctrl;
-
-ctrl.index = async (req, res) => {
-    try {
-        const images = await Image.find().sort({ timestamp: -1 });
-        res.render('index', { images });
-    } catch (error) {
-        res.status(500).send('Error al cargar las imágenes');
-    }
-};

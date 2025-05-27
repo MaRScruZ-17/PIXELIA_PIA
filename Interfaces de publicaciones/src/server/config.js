@@ -34,7 +34,7 @@ module.exports = app => {  /*Se va a recibir una constante "app"*/
     routes(app);
 
     //Static files
-    app.use('/public', express.static(path.join(__dirname, '../public'))); //para servir archivos estaticos
+    app.use(express.static(path.join(__dirname, '../public'))); //para servir archivos estaticos
 
     //Error handlers
     if ('development' === app.get('env')){

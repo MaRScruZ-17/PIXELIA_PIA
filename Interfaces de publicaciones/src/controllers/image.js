@@ -7,15 +7,22 @@ const { Image } = require('../models'); // Importa el modelo de la imagen
 const ctrl = {};
 
 
-ctrl.index = (req, res) => {
+ctrl.index = async (req, res) => {
+    // Busca la imagen por coincidencia parcial en el filename
+    const image = await Image.findOne({ filename: { $regex: req.params.image_id, $options: 'i' } });
+    console.log(image);
+    res.render('image', {image});
 
 };
 
 ctrl.create = (req, res) => {
+    if (!req.file) {
+        return res.status(400).json({ error: 'No se subió ningún archivo o el archivo es demasiado grande.' });
+    }
 
     const saveImage = async () => {
     const imgUrl = randomNumber(); //Genera un nombre aleatorio para la imagen
-    const images = await Image.find({ filename: imgUrl }); //Validación, por si ya existe una imagen con el mismo nombre
+    const images = await Image.find({ filename: imgUrl}); //Validación, por si ya existe una imagen con el mismo nombre
     if (images.length > 0) { //Si existe una imagen con el mismo nombre, genera otro nombre
         saveImage();
     } else {
@@ -28,17 +35,15 @@ ctrl.create = (req, res) => {
         await fs.rename(imageTempPath, targetPath); //Renombra la imagen
         const newImg = new Image ({ //Crea una nueva imagen para almacenar en la base de datos
             title: req.body.title,
-            description: req.body.description,
-            filename: `${imgUrl}${ext}`
+            filename: imgUrl + ext, //Nombre de la imagen con la extensión 
+            description: req.body.description
         });
         const imageSaved = await newImg.save(); //Guarda la imagen en la base de datos
-        //res.redirect('/images/:image_id'); //Redirige a la página de imágenes
-        res.send('works');
+        res.redirect('/images/' + imgUrl); 
+
     } else { 
         await fs.unlink(imageTempPath); //Elimina la imagen temporal
         res.status(500).json({ error: 'Solo imagenes permitidas' }); //Devuelve un error si la extensión no es válida
-        return; 
-
     }
     }
     };    
