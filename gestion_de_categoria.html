@@ -6,133 +6,109 @@
   <title>PIXELA</title>
   <link rel="stylesheet" href="styles6.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-</head>
-<body>
-  <header>
-  <div class="logo">PIXELA</div>
-
-  <div class="menu-container">
-    <div class="user-menu">
-      <img src="https://cdn-icons-png.flaticon.com/512/456/456212.png" alt="Usuarioblanco" width="50" class="user-icon">
-      <div class="user-dropdown">
-        <a href="#">Perfil</a>
-        <a href="#">Configuración</a>
-        <a href="#">Cerrar sesión</a>
-      </div>
-    </div>
-
-    <button class="menu-toggle">☰</button>
-  </div>
-</header>
-
-
- 
-
- <div class="search-bar">
-        
-    <input type="text" placeholder="Buscar imágenes..."/>
-  </div>
-
-<div class="menu-panel">
-  <a href="Acerca_de_nosotros.html">A&nbsp;C&nbsp;E&nbsp;R&nbsp;C&nbsp;A&nbsp;&nbsp;&nbsp;D&nbsp;E&nbsp;&nbsp;&nbsp;N&nbsp;O&nbsp;S&nbsp;O&nbsp;T&nbsp;R&nbsp;O&nbsp;S</a>
-  <a href="Testimonios.html">T&nbsp;E&nbsp;S&nbsp;T&nbsp;I&nbsp;M&nbsp;O&nbsp;N&nbsp;I&nbsp;O&nbsp;S&nbsp;&nbsp;&nbsp;D&nbsp;E&nbsp;&nbsp;&nbsp;N&nbsp;U&nbsp;E&nbsp;S&nbsp;T&nbsp;R&nbsp;O&nbsp;S&nbsp;&nbsp;&nbsp;U&nbsp;S&nbsp;U&nbsp;A&nbsp;R&nbsp;I&nbsp;O&nbsp;S</a>
-  <a href="gestion_de_categoria.html">G&nbsp;E&nbsp;S&nbsp;T&nbsp;I&nbsp;Ó&nbsp;N&nbsp;&nbsp;&nbsp;D&nbsp;E&nbsp;&nbsp;&nbsp;C&nbsp;A&nbsp;T&nbsp;E&nbsp;G&nbsp;O&nbsp;R&nbsp;Í&nbsp;A&nbsp;S</a>
-  <a href="Usuarios_reportados.html">G&nbsp;E&nbsp;S&nbsp;T&nbsp;I&nbsp;Ó&nbsp;N&nbsp;&nbsp;&nbsp;D&nbsp;E&nbsp;&nbsp;&nbsp;U&nbsp;S&nbsp;U&nbsp;A&nbsp;R&nbsp;I&nbsp;O&nbsp;S&nbsp;&nbsp;&nbsp;R&nbsp;E&nbsp;P&nbsp;O&nbsp;R&nbsp;T&nbsp;A&nbsp;D&nbsp;O&nbsp;S</a>
-  <a href="#">R&nbsp;E&nbsp;P&nbsp;O&nbsp;R&nbsp;T&nbsp;E&nbsp;&nbsp;&nbsp;D&nbsp;E&nbsp;&nbsp;&nbsp;C&nbsp;A&nbsp;T&nbsp;E&nbsp;G&nbsp;O&nbsp;R&nbsp;Í&nbsp;A</a>
-  <a href="Gestion_de_publicaciones.html">G&nbsp;E&nbsp;S&nbsp;T&nbsp;I&nbsp;Ó&nbsp;N&nbsp;&nbsp;&nbsp;D&nbsp;E&nbsp;&nbsp;&nbsp;P&nbsp;U&nbsp;B&nbsp;L&nbsp;I&nbsp;C&nbsp;A&nbsp;C&nbsp;I&nbsp;O&nbsp;N&nbsp;E&nbsp;S</a>
-</div>
-
-
-  </div>
-
- <title>Panel de Publicaciones</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50 font-sans">
+
+  <!-- Encabezado -->
+  <header class="bg-black text-white px-6 py-4 flex justify-between items-center">
+    <div class="logo text-3xl font-bold text-pink-500">PIXELA</div>
+    <div class="menu-container flex items-center gap-4">
+      <div class="user-menu relative">
+        <img src="https://cdn-icons-png.flaticon.com/512/456/456212.png" alt="Usuarioblanco" width="40" class="user-icon rounded-full cursor-pointer">
+        <div class="user-dropdown absolute right-0 mt-2 w-40 bg-white text-black shadow-lg rounded-md hidden">
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Perfil</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Configuración</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Cerrar sesión</a>
+        </div>
+      </div>
+      <button class="menu-toggle text-xl">☰</button>
+    </div>
+  </header>
+
+  <!-- Panel desplegable -->
+  <div class="menu-panel bg-gray-100 p-4 hidden">
+    <a href="Acerca_de_nosotros.html">Acerca de Nosotros</a>
+    <a href="Testimonios.html">Testimonios de nuestros usuarios</a>
+    <a href="gestion_de_categoria.html">Gestión de Categorías</a>
+    <a href="Usuarios_reportados.html">Gestión de Usuarios Reportados</a>
+    <a href="#">Reporte de Categoría</a>
+    <a href="Gestion_de_publicaciones.html">Gestión de Publicaciones</a>
+  </div>
+
+  <!-- Contenido principal -->
   <div class="flex h-screen">
     <!-- Sidebar -->
     <aside class="w-64 bg-white border-r p-4">
-      
       <div class="sidebar">
-    <div class="profile">
-     <img src="https://cdn-icons-png.flaticon.com/512/456/456212.png" alt="Usuarioblanco" width="50" class="user-icon2">
-      <span>Nombre del empleado</span>
-    </div>
-      
-      
-    <div class="menu-title">
-      <img src="https://cdn-icons-png.flaticon.com/512/1828/1828859.png" alt="Icono de menú">
-      <span>Menú</span>
-    </div>
-    
-
-
-
-    <div class="dropdown">
-  <details>
-    <summary>Gestión de página</summary>
-    <a href="">Usuarios</a><br/>
-    <a href="Gestion_de_publicaciones.html">Publicaciones</a><br/>
-    <a href="gestion_de_categoria.html">Categorías</a><br/>
-    <a href="Usuarios_reportados.html">Usuarios reportados</a><br/>
-  </details>
-</div>
-
-<div class="dropdown">
-  <details>
-    <summary>Reportes</summary>
-    <a href="">Reportes</a>
-     <a href="">Categorías</a>
-  </details>
-</div>
-
+        <div class="profile flex items-center gap-2 mb-6">
+          <img src="https://cdn-icons-png.flaticon.com/512/456/456212.png" alt="Usuarioblanco" width="40" class="user-icon2">
+          <span>Nombre del empleado</span>
+        </div>
+        <div class="menu-title flex items-center gap-2 mb-2">
+          <img src="https://cdn-icons-png.flaticon.com/512/1828/1828859.png" alt="Icono de menú" width="20">
+          <span class="font-bold">Menú</span>
+        </div>
+        <div class="dropdown">
+          <details>
+            <summary>Gestión de página</summary>
+            <a href="#">Usuarios</a><br/>
+            <a href="Gestion_de_publicaciones.html">Publicaciones</a><br/>
+            <a href="gestion_de_categoria.html">Categorías</a><br/>
+            <a href="Usuarios_reportados.html">Usuarios reportados</a><br/>
+          </details>
+        </div>
+        <div class="dropdown mt-4">
+          <details>
+            <summary>Reportes</summary>
+            <a href="#">Reportes</a>
+            <a href="#">Categorías</a>
+          </details>
+        </div>
+      </div>
       <div class="absolute bottom-4 left-4 text-sm text-gray-600">
-        <p class="font-medium">CASTORES DIENTUDOS</p>
+        <p class="font-medium">Adrián Mendoza</p>
         <p class="text-xs text-gray-500">Administrador</p>
       </div>
     </aside>
 
-    <!-- Main Content -->
-    <main class="flex-1 p-6">
-      <h1 class="text-2xl font-bold mb-4">Categorias</h1>
+    <!-- Main content -->
+    <main class="flex-1 p-6 overflow-auto">
+      <h1 class="text-2xl font-bold mb-4">Categorías</h1>
 
-      <!-- Filtros -->
- <div class="flex items-end gap-6 px-4 py-2">
-  <!-- Id usuario -->
-  <div class="flex flex-col text-left">
-    <span class="text-xs text-gray-600 mb-1">Id usuario</span>
-    <input type="text" value="#1" class="border px-3 py-1 rounded-md w-32" />
-  </div>
+      <!-- Formulario y botones -->
+      <div class="grid grid-cols-4 gap-4 mb-4">
+        <div>
+          <label for="idUsuarioInput" class="text-xs text-gray-600">Id usuario</label>
+          <input type="text" id="idUsuarioInput" class="border px-3 py-1 rounded-md w-full" />
+        </div>
+        <div>
+          <label for="idCategoriaInput" class="text-xs text-gray-600">Id categoría</label>
+          <input type="text" id="idCategoriaInput" class="border px-3 py-1 rounded-md w-full" />
+        </div>
+        <div>
+          <label for="nombreInput" class="text-xs text-gray-600">Nombre</label>
+          <input type="text" id="nombreInput" class="border px-3 py-1 rounded-md w-full" />
+        </div>
+        <div class="flex items-end gap-2">
+          <button id="btnAgregar" class="bg-black text-white px-3 py-1 rounded-md">Agregar categoría</button>
+          <button id="btnActualizar" class="bg-black text-white px-3 py-1 rounded-md">Actualizar</button>
+          <button id="btnEliminar" class="bg-black text-white px-3 py-1 rounded-md">Eliminar</button>
+        </div>
+      </div>
 
-  <!-- Id publicaciones -->
-  <div class="flex flex-col text-left">
-    <span class="text-xs text-gray-600 mb-1">Id Categoria</span>
-    <input type="text" value="#423" class="border px-3 py-1 rounded-md w-36" />
-  </div>
-
-  
-  <!-- Botón -->
-  <div class="flex flex-col">
-    <button class="bg-black text-white px-4 py-2 rounded-md mt-5">
-      Agregar Categoria
-    </button>
-  </div>
-  <div class="flex flex-col">
-    <button class="bg-black text-white px-4 py-2 rounded-md mt-5">
-      Actualizar Categoria
-    </button>
-  </div>
-  <div class="flex flex-col">
-    <button class="bg-black text-white px-4 py-2 rounded-md mt-5">
-      Eliminar Categoria
-    </button>
-  </div>
-</div>
-
-
-
-       
-      
+      <!-- Formulario oculto para agregar -->
+     <form id="formAgregar" action="AÑADIR.php" method="POST">
+  <label for="nombreCategoria">Nombre de la nueva categoría:</label>
+  <input 
+    type="text" 
+    id="nombreCategoria" 
+    name="nombreCategoria" 
+    required 
+    class="border px-3 py-1 rounded-md"
+  />
+  <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded-md mt-2">Guardar categoría</button>
+</form>
 
       <!-- Buscador -->
       <input type="text" placeholder="Filtrar..." class="border w-full px-3 py-2 mb-4 rounded-md" />
@@ -144,96 +120,114 @@
             <tr>
               <th class="px-4 py-2">#</th>
               <th class="px-4 py-2">Id usuario</th>
-              <th class="px-4 py-2">Categoria</th>
-              <th class="px-4 py-2">Guardada</th>
-              <th class="px-4 py-2">Reporte</th>
-               
+              <th class="px-4 py-2">Categoría</th>
+              <th class="px-4 py-2">Guardadas</th>
+              <th class="px-4 py-2">Reportes</th>
             </tr>
           </thead>
-          <tbody>
-            <tr class="border-t">
-              <td class="px-4 py-2"><input type="checkbox" /></td>
-              <td class="px-4 py-2">#1</td>
-              <td class="px-4 py-2">-</td>
-              <td class="px-4 py-2">*</td>
-              <td class="px-4 py-2">-</td>
-              
-            </tr>
-            <tr class="border-t bg-gray-50">
-              <td class="px-4 py-2"><input type="checkbox" /></td>
-              <td class="px-4 py-2">#2</td>
-              <td class="px-4 py-2">423</td>
-              <td class="px-4 py-2">*</td>
-              <td class="px-4 py-2">-</td>
-            
-            </tr>
-            <tr class="border-t">
-              <td class="px-4 py-2"><input type="checkbox" /></td>
-              <td class="px-4 py-2">#3</td>
-              <td class="px-4 py-2">212</td>
-              <td class="px-4 py-2">*</td>
-              <td class="px-4 py-2">-</td>
-           
-            </tr>
-            <tr class="border-t bg-gray-50">
-              <td class="px-4 py-2"><input type="checkbox" /></td>
-              <td class="px-4 py-2">#4</td>
-              <td class="px-4 py-2">8</td>
-              <td class="px-4 py-2">*</td>
-              <td class="px-4 py-2">-</td>
-              
-            </tr>
-            <tr class="border-t">
-              <td class="px-4 py-2"><input type="checkbox" /></td>
-              <td class="px-4 py-2">#5</td>
-              <td class="px-4 py-2">45</td>
-              <td class="px-4 py-2">*</td>
-              <td class="px-4 py-2">-</td>
-              
-            </tr>
+          <tbody id="tabla-categorias">
+            <!-- Se inserta desde INSERTAR_C.php -->
           </tbody>
         </table>
       </div>
-
-      <!-- Footer -->
-      <div class="flex justify-between items-center mt-4 text-sm text-gray-600">
-        <p>0 of 5 row(s) selected.</p>
-        <div class="space-x-2">
-          <button class="px-2 py-1 border rounded-md text-gray-500">ANTERIOR</button>
-       
-        </div>
-      </div>
     </main>
   </div>
-  
 
-
-  <footer>
-    © 2025 Pixela. Todos los derechos reservados. Quedad prohibida la reproducccion total o parcial de este sitio sin autorizacion.
+  <!-- Footer -->
+  <footer class="bg-black text-white text-center py-2 text-xs">
+    © 2025 Pixela. Todos los derechos reservados. Queda prohibida la reproducción total o parcial de este sitio sin autorización
   </footer>
 
+  <!-- Scripts -->
   <script>
-    const toggleBtn = document.querySelector('.menu-toggle');
-    const menuPanel = document.querySelector('.menu-panel');
-    const userIcon = document.querySelector('.user-icon');
-    const userDropdown = document.querySelector('.user-dropdown');
-
-    toggleBtn.addEventListener('click', () => {
-      menuPanel.style.display = menuPanel.style.display === 'flex' ? 'none' : 'flex';
-      userDropdown.classList.remove('show');
+    // Mostrar formulario de agregar
+    document.getElementById('btnAgregar').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.getElementById('formAgregarContainer').style.display = 'block';
     });
 
-    userIcon.addEventListener('click', () => {
-      userDropdown.classList.toggle('show');
-      menuPanel.style.display = 'none';
+    // Cancelar agregar
+    document.getElementById('btnCancelarAgregar').addEventListener('click', function() {
+      document.getElementById('formAgregarContainer').style.display = 'none';
     });
 
-    window.addEventListener('click', (e) => {
-      if (!e.target.closest('header') && !e.target.closest('.menu-panel')) {
-        menuPanel.style.display = 'none';
-        userDropdown.classList.remove('show');
+    // Actualizar categoría
+document.getElementById('btnActualizar').addEventListener('click', function(e) {
+  e.preventDefault();
+  const id = prompt('Ingrese el ID de la categoría a actualizar:');
+  if (!id || isNaN(id)) {
+    alert('ID inválido.');
+    return;
+  }
+  let nuevoNombre = prompt('Ingrese el nuevo nombre para la categoría:');
+  if (!nuevoNombre || nuevoNombre.trim() === '') {
+    alert('El nombre de la categoría es obligatorio.');
+    return;
+  }
+  const form = document.createElement('form');
+  form.method = 'POST';
+  form.action = 'actualizar_categoria.php';
+  form.style.display = 'none';
+
+  const inputId = document.createElement('input');
+  inputId.type = 'hidden';
+  inputId.name = 'idCategoria';
+  inputId.value = id.trim();
+
+  const inputNombre = document.createElement('input');
+  inputNombre.type = 'hidden';
+  inputNombre.name = 'nuevoNombre';
+  inputNombre.value = nuevoNombre.trim();
+
+  form.appendChild(inputId);
+  form.appendChild(inputNombre);
+  document.body.appendChild(form);
+  form.submit();
+});
+
+
+    // Eliminar categoría
+    document.getElementById('btnEliminar').addEventListener('click', function(e) {
+      e.preventDefault();
+      const id = prompt('Ingrese el ID de la categoría a eliminar:');
+      if (!id || isNaN(id)) {
+        alert('ID inválido.');
+        return;
+      }
+      if (confirm('¿Está seguro de eliminar la categoría con ID ' + id + '?')) {
+        const form = document.createElement('form');
+        form.method = 'POST';
+        form.action = 'eliminar_categoria.php';
+        form.style.display = 'none';
+
+        const inputId = document.createElement('input');
+        inputId.type = 'hidden';
+        inputId.name = 'idCategoria';
+        inputId.value = id.trim();
+
+        form.appendChild(inputId);
+        document.body.appendChild(form);
+        form.submit();
       }
     });
+
+    // Cargar datos dinámicamente
+    fetch("INSERTAR_C.php")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("tabla-categorias").innerHTML = data;
+        document.querySelectorAll("#tabla-categorias tr").forEach(tr => {
+          tr.addEventListener("click", () => {
+            const celdas = tr.querySelectorAll("td");
+            if (celdas.length === 5) {
+              document.getElementById("idUsuarioInput").value = celdas[1].innerText;
+              document.getElementById("idCategoriaInput").value = celdas[0].innerText;
+              document.getElementById("nombreInput").value = celdas[2].innerText;
+            }
+          });
+        });
+      })
+      .catch(err => console.error(err));
   </script>
 </body>
 </html>

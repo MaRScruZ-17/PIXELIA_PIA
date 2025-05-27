@@ -3,113 +3,114 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>PIXELA</title> <!--TITULO PESTAÑA DE NAVEGADOR-->
-  <link rel="stylesheet" href="Style_R.css"/> <!--CONEXIÓN A CSS-->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> <!--FUENTE "ROBOTO" DESDE GOOGLE-->
+  <title>PIXELA</title>
+  <link rel="stylesheet" href="Style_R.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <header>
-  <div class="logo">PIXELA</div> <!--LOGO PIXELA-->
-
-  <div class="menu-container"> <!--CONTENEDOR PARA LOS ELEMENTOS DEL MENÚ-->
-    <div class="user-menu">
-      <img src="https://cdn-icons-png.flaticon.com/512/456/456212.png" alt="Usuarioblanco" width="50" class="user-icon"> <!--ICONO DEL MENÚ DESDE GOOGLE-->
-      <div class="user-dropdown"> <!--MENÚ CON OPCIONES DEL PERFIL-->
-        <a href="#">Perfil</a>
-        <a href="#">Configuración</a>
-        <a href="#">Cerrar sesión</a>
+    <div class="logo">PIXELA</div>
+    <div class="menu-container">
+      <div class="user-menu">
+        <img src="https://cdn-icons-png.flaticon.com/512/456/456212.png" alt="Usuarioblanco" width="50" class="user-icon">
+        <div class="user-dropdown">
+          <a href="#">Perfil</a>
+          <a href="#">Configuración</a>
+          <a href="#">Cerrar sesión</a>
+        </div>
       </div>
+      <button class="menu-toggle">☰</button>
     </div>
+  </header>
 
-    <button class="menu-toggle">☰</button> <!--BOTÓN DE MENÚ-->
-  </div>
-</header>
-
-
-  <div class="search-bar"> <!--CLASE PARA LA BARRA BUSCADORA-->
-    <input type="text" placeholder="Buscar imágenes..."/> <!--CAMPOS DE ENTRADA DE TEXTO-->
+  <div class="search-bar">
+    <input type="text" placeholder="Buscar imágenes..."/>
   </div>
 
-  <div class="menu-panel"> <!--OPCIONES DEL BOTÓN DE MENÚ-->
+  <div class="menu-panel">
     <a href="#">Inicio</a>
     <a href="#">Galería</a>
     <a href="#">Favoritos</a>
     <a href="#">Contacto</a>
   </div>
 
-<!--REGISTRO-->
-<div class="registro-fondo"> <!--CLASE DEL FONDO DE REGISTRO-->
-  <img src="Registro-computadora.png" alt="Computadora" class="computadora-img"> 
+  <!-- REGISTRO -->
+  <div class="registro-fondo">
+    <img src="Registro-computadora.png" alt="Computadora" class="computadora-img">
 
-  <div class="registro-container"> <!--CLASE DEL REGISTRO-->
-    <div class="registro-titulo">REGISTRO</div>
+    <div class="registro-container">
+      <div class="registro-titulo">REGISTRO</div>
 
-    <div class="registro-box"> <!--CONTENEDOR QUE AGRUPA LAS DOS COLUMNAS DENTRO DE UN MISMO CONTENEDOR-->
+      <!-- FORMULARIO INICIA AQUÍ -->
+      <form id="registroForm" action="registro.php" method="POST">
+        <div class="registro-box">
 
-      <!--COLUMNA IZQUIERDA-->
-      <div class="form-left">
-        <div class="avatar-placeholder">
-          <img src="Registro-usuario.png" alt="Foto de usuario">
+          <!-- COLUMNA IZQUIERDA -->
+          <div class="form-left">
+            <div class="avatar-placeholder">
+              <img src="Registro-usuario.png" alt="Foto de usuario">
+            </div>
+
+            <div class="input-group">
+              <img src="Registro-usuario.png" alt="icono usuario">
+              <input type="text" id="username" name="username" placeholder="Nombre de usuario . . ." required>
+            </div>
+
+            <div class="input-group">
+              <img src="Registro-correo.png" alt="icono correo">
+              <input type="email" id="email" name="email" placeholder="Correo electrónico . . ." required>
+            </div>
+
+            <div class="input-group">
+              <img src="Registro-contraseña.png" alt="icono contraseña">
+              <input type="password" id="password" name="password" placeholder="Contraseña . . ." required>
+            </div>
+
+            <div class="input-group">
+              <img src="Registro-contraseña.png" alt="icono contraseña">
+              <input type="password" id="confirmPassword" placeholder="Confirmar contraseña . . ." required>
+            </div>
+          </div>
+
+          <!-- COLUMNA DERECHA -->
+          <div class="form-right">
+            <div class="button-group">
+              <button type="submit" class="ingresar">REGISTRARSE</button>
+              <button type="button" class="iniciar-sesion">INICIAR SESIÓN</button>
+            </div>
+
+            <div class="user-select">
+              <img src="Registro-tipousuario.png" alt="icono tipo de usuario">
+              <select name="tipousuario" required>
+                <option value="">Seleccione una opción . . .</option>
+                <option value="1">Empleado Administrador</option>
+                <option value="2">Empleado General</option>
+                <option value="3">Usuario Registrado</option>
+              </select>
+            </div>
+
+            <div class="gender-select">
+              <img src="Registro-genero.png" alt="icono género">
+              <select name="genero" required>
+                <option value="">Seleccione una opción . . .</option>
+                <option value="1">Mujer</option>
+                <option value="2">Hombre</option>
+              </select>
+            </div>
+          </div>
         </div>
-
-        <div class="input-group">
-          <img src="Registro-usuario.png" alt="icono usuario">
-          <input type="text" id="username" placeholder="Nombre de usuario . . .">
-        </div>
-
-        <div class="input-group">
-          <img src="Registro-correo.png" alt="icono correo">
-          <input type="email" id="email" placeholder="Correo electrónico . . .">
-        </div>
-
-        <div class="input-group">
-          <img src="Registro-contraseña.png" alt="icono contraseña">
-          <input type="password" id="password" placeholder="Contraseña . . .">
-        </div>
-
-        <div class="input-group">
-          <img src="Registro-contraseña.png" alt="icono contraseña">
-          <input type="password" id="confirmPassword" placeholder="Confirmar contraseña . . .">
-        </div>
-      </div>
-
-      <!--COLUMNA DERECHA-->
-      <div class="form-right">
-
-        <div class="button-group">
-          <button class="ingresar">INGRESAR</button>
-          <button class="iniciar-sesion" disabled>INICIAR SESIÓN</button> <!--EL "DISABLED" ACTIVA EL BOTÓN SOLO CUANDO EL USUARIO ESTE REGISTRADO-->
-        </div>
-
-        <div class="user-select">
-         <img src="Registro-tipousuario.png" alt="icono tipo de usuario">
-         <select>
-          <option>Seleccione una opción . . .</option>
-          <option>Empleado Administrador ---</option>
-          <option>Empleado General ---</option>
-         <option>Usuario Registrado ---</option>
-        </select>
-        </div>
-
-        <div class="gender-select">
-          <img src="Registro-genero.png" alt="icono género">
-          <select>
-            <option>Seleccione una opción . . .</option>
-            <option>Mujer</option>
-            <option>Hombre</option>
-          </select>
-        </div>
-
-      </div>
+      </form>
+      <!-- FORMULARIO TERMINA AQUÍ -->
     </div>
   </div>
-</div>
 
   <footer>
     © 2025 Pixela. Todos los derechos reservados. Quedad prohibida la reproducccion total o parcial de este sitio sin autorizacion.
   </footer>
 
   <script>
+    // Menú
     const toggleBtn = document.querySelector('.menu-toggle');
     const menuPanel = document.querySelector('.menu-panel');
     const userIcon = document.querySelector('.user-icon');
@@ -130,6 +131,21 @@
         menuPanel.style.display = 'none';
         userDropdown.classList.remove('show');
       }
+    });
+
+    // Validar que las contraseñas coincidan antes de enviar
+    document.getElementById("registroForm").addEventListener("submit", function(e) {
+      const pass1 = document.getElementById("password").value;
+      const pass2 = document.getElementById("confirmPassword").value;
+      if (pass1 !== pass2) {
+        alert("Las contraseñas no coinciden.");
+        e.preventDefault(); // Detiene el envío
+      }
+    });
+
+    // Redirigir a login
+    document.querySelector(".iniciar-sesion").addEventListener("click", function() {
+      window.location.href = "login.html"; // Cambia por tu archivo real
     });
   </script>
 </body>

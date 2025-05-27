@@ -9,22 +9,20 @@
 </head>
 <body>
   <header>
-  <div class="logo">PIXELA</div> <!--LOGO PIXELA-->
+    <div class="logo">PIXELA</div> <!--LOGO PIXELA-->
 
-  <div class="menu-container"> <!--CONTENEDOR PARA LOS ELEMENTOS DEL MENÚ-->
-    <div class="user-menu">
-      <img src="https://cdn-icons-png.flaticon.com/512/456/456212.png" alt="Usuarioblanco" width="50" class="user-icon"> <!--ICONO DEL MENÚ DESDE GOOGLE-->
-      <div class="user-dropdown"> <!--MENÚ CON OPCIONES DEL PERFIL-->
-        <a href="#">Perfil</a>
-        <a href="#">Configuración</a>
-        <a href="#">Cerrar sesión</a>
+    <div class="menu-container"> <!--CONTENEDOR PARA LOS ELEMENTOS DEL MENÚ-->
+      <div class="user-menu">
+        <img src="https://cdn-icons-png.flaticon.com/512/456/456212.png" alt="Usuarioblanco" width="50" class="user-icon"> <!--ICONO DEL MENÚ DESDE GOOGLE-->
+        <div class="user-dropdown"> <!--MENÚ CON OPCIONES DEL PERFIL-->
+          <a href="#">Perfil</a>
+          <a href="#">Configuración</a>
+          <a href="#">Cerrar sesión</a>
+        </div>
       </div>
+      <button class="menu-toggle">☰</button> <!--BOTÓN DE MENÚ-->
     </div>
-
-    <button class="menu-toggle">☰</button> <!--BOTÓN DE MENÚ-->
-  </div>
-</header>
-
+  </header>
 
   <div class="search-bar"> <!--CLASE PARA LA BARRA BUSCADORA-->
     <input type="text" placeholder="Buscar imágenes..."/> <!--CAMPOS DE ENTRADA DE TEXTO-->
@@ -37,62 +35,61 @@
     <a href="#">Contacto</a>
   </div>
 
-<!--LOGIN-->
-<div class="login-fondo"> <!--CLASE DEL FONDO DE LOGIN-->
+  <!--LOGIN-->
+  <div class="login-fondo"> <!--CLASE DEL FONDO DE LOGIN-->
+    <div class="login-container"> <!--CLASE DEL CONTENEDOR DEL LOGIN-->
+      <div class="login-titulo">INICIO DE SESIÓN</div>
 
-  <div class="login-container"> <!--CLASE DEL CONTENEDOR DEL LOGIN-->
-    <div class="login-titulo">INICIO DE SESIÓN</div>
+      <div class="login-box"> <!--CONTENEDOR QUE AGRUPA LAS DOS COLUMNAS DENTRO DE UN MISMO CONTENEDOR-->
 
-    <div class="login-box"> <!--CONTENEDOR QUE AGRUPA LAS DOS COLUMNAS DENTRO DE UN MISMO CONTENEDOR-->
+        <!--COLUMNA IZQUIERDA (AHORA ES UN FORMULARIO)-->
+        <form action="login.php" method="POST" class="form-left">
+          <div class="avatar-placeholder">
+            <img src="Login-usuario.png" alt="Foto de usuario">
+          </div>
 
-      <!--COLUMNA IZQUIERDA-->
-      <div class="form-left">
-        <div class="avatar-placeholder">
-          <img src="Login-usuario.png" alt="Foto de usuario">
+          <div class="input-group">
+            <img src="Login-usuario.png" alt="icono usuario">
+            <input type="text" id="username" name="username" placeholder="Nombre de usuario . . ." required>
+          </div>
+
+          <div class="input-group">
+            <img src="Login-contraseña.png" alt="icono contraseña">
+            <input type="password" id="password" name="password" placeholder="Contraseña . . ." required>
+          </div>
+
+          <div class="user-select">
+            <img src="Login-tipousuario.png" alt="icono tipo de usuario">
+            <select name="tipo_usuario" required>
+              <option value="">Seleccione una opción . . .</option>
+              <option value="1">Empleado Administrador ---</option>
+              <option value="2">Empleado General ---</option>
+              <option value="3">Usuario Registrado ---</option>
+            </select>
+          </div>
+
+          <div class="gender-select">
+            <img src="Login-genero.png" alt="icono género">
+            <select name="genero" required>
+              <option value="">Seleccione una opción . . .</option>
+              <option value="F">Mujer</option>
+              <option value="M">Hombre</option>
+            </select>
+          </div>
+
+          <div class="button-group">
+            <button type="submit" class="ingresar">INGRESAR</button>
+          </div>
+        </form>
+
+        <!--COLUMNA DERECHA-->
+        <div class="form-right">
+          <!-- Aquí puedes agregar alguna imagen o texto adicional si lo deseas -->
         </div>
-
-        <div class="input-group">
-          <img src="Login-usuario.png" alt="icono usuario">
-          <input type="text" id="username" placeholder="Nombre de usuario . . .">
-        </div>
-
-        <div class="input-group">
-          <img src="Login-contraseña.png" alt="icono contraseña">
-          <input type="password" id="password" placeholder="Contraseña . . .">
-        </div>
-
-        <div class="user-select">
-         <img src="Login-tipousuario.png" alt="icono tipo de usuario">
-         <select>
-          <option>Seleccione una opción . . .</option>
-          <option>Empleado Administrador ---</option>
-          <option>Empleado General ---</option>
-         <option>Usuario Registrado ---</option>
-        </select>
-        </div>
-
-        <div class="gender-select">
-          <img src="Login-genero.png" alt="icono género">
-          <select>
-            <option>Seleccione una opción . . .</option>
-            <option>Mujer</option>
-            <option>Hombre</option>
-          </select>
-        </div>
-      </div>
-
-      <!--COLUMNA DERECHA-->
-      <div class="form-right">
-
-        <div class="button-group">
-          <button class="ingresar">INGRESAR</button>
-        </div>
-
       </div>
     </div>
   </div>
-</div>
-  
+
   <footer>
     © 2025 Pixela. Todos los derechos reservados. Quedad prohibida la reproducccion total o parcial de este sitio sin autorizacion.
   </footer>
