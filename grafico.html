@@ -1,45 +1,35 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <!-- Fuente Rozha One desde Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Rozha+One&display=swap" rel="stylesheet">
-  <style>
-    h2 {
-      font-family: 'Rozha One', serif;
-    }
-  </style>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PIXELA</title>
-  <link rel="stylesheet" href="styles1.css"/>
+  <link rel="stylesheet" href="styles.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <header>
-  <div class="logo">PIXELA</div>
-
-  <div class="menu-container">
-    <div class="user-menu">
-      <img src="https://cdn-icons-png.flaticon.com/512/456/456212.png" alt="Usuarioblanco" width="50" class="user-icon">
-      <div class="user-dropdown">
-        <a href="#">Perfil</a>
-        <a href="#">Configuración</a>
-        <a href="#">Cerrar sesión</a>
+    <div class="logo">PIXELA</div>
+    <div class="menu-container">
+      <div class="user-menu">
+        <img src="https://cdn-icons-png.flaticon.com/512/456/456212.png" alt="Usuarioblanco" width="50" class="user-icon">
+        <div class="user-dropdown">
+          <a href="#">Perfil</a>
+          <a href="#">Configuración</a>
+          <a href="#">Cerrar sesión</a>
+        </div>
       </div>
+      <button class="menu-toggle">☰</button>
     </div>
-
-    <button class="menu-toggle">☰</button>
-  </div>
-</header>
-
+  </header>
 
   <div class="search-bar">
-        
     <input type="text" placeholder="Buscar imágenes..."/>
   </div>
 
-<div class="menu-panel">
-  <a href="Acerca_de_nosotros.html">A&nbsp;C&nbsp;E&nbsp;R&nbsp;C&nbsp;A&nbsp;&nbsp;&nbsp;D&nbsp;E&nbsp;&nbsp;&nbsp;N&nbsp;O&nbsp;S&nbsp;O&nbsp;T&nbsp;R&nbsp;O&nbsp;S</a>
+  <div class="menu-panel">
+     <a href="Acerca_de_nosotros.html">A&nbsp;C&nbsp;E&nbsp;R&nbsp;C&nbsp;A&nbsp;&nbsp;&nbsp;D&nbsp;E&nbsp;&nbsp;&nbsp;N&nbsp;O&nbsp;S&nbsp;O&nbsp;T&nbsp;R&nbsp;O&nbsp;S</a>
   <a href="Testimonios.html">T&nbsp;E&nbsp;S&nbsp;T&nbsp;I&nbsp;M&nbsp;O&nbsp;N&nbsp;I&nbsp;O&nbsp;S&nbsp;&nbsp;&nbsp;D&nbsp;E&nbsp;&nbsp;&nbsp;N&nbsp;U&nbsp;E&nbsp;S&nbsp;T&nbsp;R&nbsp;O&nbsp;S&nbsp;&nbsp;&nbsp;U&nbsp;S&nbsp;U&nbsp;A&nbsp;R&nbsp;I&nbsp;O&nbsp;S</a>
   <a href="gestion_de_categoria.html">G&nbsp;E&nbsp;S&nbsp;T&nbsp;I&nbsp;Ó&nbsp;N&nbsp;&nbsp;&nbsp;D&nbsp;E&nbsp;&nbsp;&nbsp;C&nbsp;A&nbsp;T&nbsp;E&nbsp;G&nbsp;O&nbsp;R&nbsp;Í&nbsp;A&nbsp;S</a>
   <a href="Usuarios_reportados.html">G&nbsp;E&nbsp;S&nbsp;T&nbsp;I&nbsp;Ó&nbsp;N&nbsp;&nbsp;&nbsp;D&nbsp;E&nbsp;&nbsp;&nbsp;U&nbsp;S&nbsp;U&nbsp;A&nbsp;R&nbsp;I&nbsp;O&nbsp;S&nbsp;&nbsp;&nbsp;R&nbsp;E&nbsp;P&nbsp;O&nbsp;R&nbsp;T&nbsp;A&nbsp;D&nbsp;O&nbsp;S</a>
@@ -48,43 +38,16 @@
 <a href="#">G&nbsp;A&nbsp;L&nbsp;E&nbsp;R&nbsp;Í&nbsp;A&nbsp;&nbsp;&nbsp;P&nbsp;R&nbsp;I&nbsp;N&nbsp;C&nbsp;I&nbsp;P&nbsp;A&nbsp;L</a>
   <a href="Gestion_de_publicaciones.html">G&nbsp;E&nbsp;S&nbsp;T&nbsp;I&nbsp;Ó&nbsp;N&nbsp;&nbsp;&nbsp;D&nbsp;E&nbsp;&nbsp;&nbsp;P&nbsp;U&nbsp;B&nbsp;L&nbsp;I&nbsp;C&nbsp;A&nbsp;C&nbsp;I&nbsp;O&nbsp;N&nbsp;E&nbsp;S</a>
 <a href="grafico.html">R&nbsp;E&nbsp;P&nbsp;O&nbsp;R&nbsp;T&nbsp;E&nbsp;S&nbsp;&nbsp;&nbsp;P&nbsp;O&nbsp;R&nbsp;&nbsp;&nbsp;G&nbsp;É&nbsp;N&nbsp;E&nbsp;R&nbsp;O</a>
-
   </div>
 
-
-  <!-- CONTENIDO CENTRAL -->
-  <main>
-    <section class="gallery">
-      <div class="image-grid">
-        <img src="https://cdn.pixabay.com/photo/2017/01/06/19/15/lion-1955056_1280.jpg" alt="León">
-        <img src="https://cdn.pixabay.com/photo/2015/11/16/16/28/dolphin-1045950_1280.jpg" alt="Delfín">
-        <img src="https://cdn.pixabay.com/photo/2020/06/07/14/28/jaguar-5270979_1280.jpg" alt="Jaguar">
-        <img src="https://cdn.pixabay.com/photo/2016/01/14/06/09/squirrel-1139133_1280.jpg" alt="Ardilla">
-        <img src="https://cdn.pixabay.com/photo/2020/06/17/07/01/capybara-5308706_1280.jpg" alt="Carpinchos">
-      </div>
-    </section>
-
-    <section class="welcome">
-      <h2>Bienvenidos a PIXELIA: Tu galería interactiva de imágenes</h2>
-       <ul>
-        Explora, comparte y conecta a través de imágenes. En PIXELIA, puedes descubrir
-        colecciones inspiradoras, crear tu propio álbum personal y formar parte de una comunidad vibrante.
-       </ul>
-      <ul>
-        <li>Comparte tus momentos favoritos</li>
-        <li>Comenta y conecta con otros usuarios</li>
-        <li>Organiza tus imágenes en álbumes personalizados</li>
-        <li>Descubre las capturas más populares del día</li>
-      </ul>
-    </section>
-
-    <section class="auth-links">
-      <p>Para disfrutar de todas las funciones, <a href="login.html">inicia sesión</a> o <a href="Registro.html">regístrate ahora</a> y únete a la comunidad.</p>
-    </section>
-  </main>
+  <!-- 🥧 Aquí va la gráfica -->
+  <section style="max-width: 600px; margin: 40px auto;">
+    <h2 style="text-align: center;">Usuarios Registrados por Sexo</h2>
+    <canvas id="sexoChart" width="400" height="400"></canvas>
+  </section>
 
   <footer>
-    © 2025 Pixela. Todos los derechos reservados. Queda prohibida la reproducción total o parcial de este sitio sin autorización.
+    © 2025 Pixela. Todos los derechos reservados. Quedad prohibida la reproducccion total o parcial de este sitio sin autorizacion.
   </footer>
 
   <script>
@@ -109,6 +72,35 @@
         userDropdown.classList.remove('show');
       }
     });
+
+    // Gráfica de pastel con datos de PHP
+    fetch('datos.php')
+      .then(response => response.json())
+      .then(data => {
+        const labels = data.map(item => item.sexo);
+        const totals = data.map(item => item.total);
+
+        const ctx = document.getElementById('sexoChart').getContext('2d');
+        new Chart(ctx, {
+          type: 'pie',
+          data: {
+            labels: labels,
+            datasets: [{
+              data: totals,
+              backgroundColor: ['#36A2EB', '#FF6384', '#FFCE56']
+            }]
+          },
+          options: {
+            responsive: true,
+            plugins: {
+              legend: {
+                position: 'bottom'
+              }
+            }
+          }
+        });
+      })
+      .catch(error => console.error('Error al obtener datos:', error));
   </script>
 </body>
 </html>
